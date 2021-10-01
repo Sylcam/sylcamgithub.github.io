@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Présentation de Geek Experience</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/4d2e7b3afe.js" crossorigin="anonymous"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #00b2b3;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #00b2b3;
+    font-size: 50px;
+  }
+  .logo {
+    color: #00b2b3;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #00b2b3;
+  }
+  .carousel-indicators li {
+    border-color: #00b2b3;
+  }
+  .carousel-indicators li.active {
+    background-color: #00b2b3;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    margin: 70px 0;
+  }
+  .panel {
+    border: 1px solid #00b2b3; 
+    border-radius:0 ;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #00b2b3;
+    background-color: #fff ;
+    color: #00b2b3;
+  }
+  .panel-heading {
+    color: #fff ;
+    background-color: #00b2b3 ;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white ;
+  }
+  i {
+        font-size: 50px;
+        color:#00b2b3;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #00b2b3;
+    color: #fff;
+  }
+  #nav {
+    margin-bottom: 0;
+    background-color: #00b2b3;
+    border: 0;
+    font-size: 12px ;
+    line-height: 1.42857143 ;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #303030 ;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #00b2b3 ;
+    background-color: #00b2b3 ;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #00b2b3 ;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #00b2b3;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage">Geek Experience</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">Qui sommes-nous ?</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#reseaux">Réseaux Sociaux</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="jumbotron text-center">
+  <h1>Geek Experience</h1> 
+  <p>Site d'actualité jeux vidéo</p> 
+  <form>
+    <div class="input-group">
+    </div>
+  </form>
+</div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Qui sommes-nous ?</h2><br>
+      <h4>Un site géré par deux passionées qui avec leur temps souhaite proposé une information de qualité plutôt de quantité</h4><br>
+      <p>Retrouvez ainsi des articles chaque jours sur les grands sujets d'actualités du secteur du jeux vidéo, avec comme valeurt ajouté l'expérience de notre duo qui vous aidera à comprendre chaque information et ses enjeux.</p>
+      <br><a href="https://www.geekexperience.fr"><button class="btn btn-default btn-lg">Visiter le site</button></a>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>NOS VALEURS</h2><br>
+      <h4><strong>MISSION:</strong> Notre mission est de fournir une information qualitative avec aide pour comprendre les choix des entreprises et les enjeux qui s'y cachent</h4><br>
+      <p><strong>VISION:</strong>Notre vision est qu'il est possible de faire de la bonne information en prennant plus de temps de lire et de comprendre chaque information, ne plus être dans la course au plus rapide. Prendre le temps de donner une information clair et correct tout en expliquant pourquoi celle-ci existe. </p>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>Ce que nous offrons</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="far fa-newspaper"></i>
+      <h4>Actualité</h4>
+      <p>Des acticles quotidien de grande qualité</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="far fa-folder"></i>
+      <h4>Dossiers</h4>
+      <p>Des dossiers sur des sujets plus profond</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-check"></i>
+      <h4>Avis</h4>
+      <p>Des avis sur de nombreux jeux pour votre informé sur les produits</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="far fa-calendar-alt"></i>
+      <h4>Événement</h4>
+      <p>Couverture de l'ensemble des événements jeux vidéo chaque année</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-poll"></i>
+      <h4>Sondage</h4>
+      <p>Vous participé avec des sondages et vos retours sur chaque actualités</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fas fa-wrench"></i>
+      <h4 style="color:#303030;">Travail</h4>
+      <p>Une grande qualité de travail au quotiden par passion</p>
+    </div>
+  </div>
+</div>
+
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>Quelques exemples</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="D:\Images D\Pro\Nx- Images\Ancienne\sms5knu5oBwKCrQAM9beMA.jpeg" alt="Artwork original de Zelda 1 mais avec le Link de Breath of the Wild" width="400" height="300">
+        <p><strong>Dossier</strong></p>
+        <p><strong>35 ans de The Legend of Zelda</p></strong>
+        <br/><p>La licence The Legend of Zelda fête ce 21 février 2021 ses 35 ans, 35 ans d'une série légendaire</p>
+        <a href="https://www.geekexperience.fr/jeux-video/jeux/35-ans-the-legend-of-zelda/"><button type="button" class="btn">Voir le dossier</button></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="D:\Images D\Pro\Nx- Images\Logo - Switch - Concu\oled-model-photo-01.jpg" alt="Visuel de la Nintendo Switch OLED" width="400" height="300">
+        <p><strong>Articles</strong></p>
+        <p><strong>La Nintendo Switch OLED est officielle</p></strong>
+        <br/><p>Après des mois de rumeurs, des semaines d'attente, Nintendo a surpris tout le monde avec l'annonce de sa Nintendo Switch OLED, une amélioration globale du modèle original</p>
+        <a href="https://www.geekexperience.fr/jeux-video/consoles/nintendo-switch-oled-officielle/"><button type="button" class="btn">Voir l'article</button></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="D:\Images D\Perso\Wallpaper\Tales of Arise\TAO-Wallpaper-3840x2160-Artwork2.png" alt="Artwork de Tales of Arise" width="400" height="300">
+        <p><strong>Avis</strong></p>
+        <p><strong>Avis: Tales of Arise</p></strong>
+        <br/><p>ales of Arise est le nouveau action-RPG de Bandai Namco qui doit rafraîchir la licence, mais est-il vraiment à la hauteur de ce rôle ?</p>
+        <a href="https://www.geekexperience.fr/jeux-video/avis/avis-tales-of-arise/"><button type="button" class="btn">Voir l'avis</button></a>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Autres exemples rapides</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4><strong>Une fin d’année chargée, de même pour 2022 ?</strong><br><p>La fin d'année sera chargée niveau sortie de jeux, mais ce ne sera pas fini car 2022 s'annonce tout autant chargée en nouvelle sortie</p></h4>
+      </div>
+      <div class="item">
+        <h4><strong>Théorie sur la suite de Zelda Breath of the Wild</strong><br><p>Le second trailer de la suite de Zelda Breath of the Wild a été montré et donne de nouvelles informations qui me donne une possibilité d'imaginer cette suite</p></h4>
+      </div>
+      <div class="item">
+        <h4><strong> The Legend of Zelda Skyward Sword HD</strong><br><p>The Legend of Zelda Skyward Sword, ressort via un remaster en HD apportant un contrôle aux boutons, mais vaut-il le coup ?</p></h4>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Précédent</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Suivant</span>
+    </a>
+  </div>
+</div>
+
+<div id="reseaux" class="container-fluid text-center">
+  <h2>Réseaux sociaux</h2>
+  <br>
+    <div class="row slideanim">
+      <a href="https://twitter.com/GExperienceFR"><div class="col-sm-4">
+        <i class="fab fa-twitter"></i>
+        <h4>Twitter</h4></a>
+      </div>
+      <a href="https://www.facebook.com/GeekExperienceFR"><div class="col-sm-4">
+        <i class="fab fa-facebook"></i>
+        <h4>Facebook</h4></a>
+      </div>
+      <a href="https://www.instagram.com/geekexperiencefr/"><div class="col-sm-4">
+        <i class="fab fa-instagram"></i>
+        <h4>Instagram</h4></a>
+      </div>
+    </div>
+</div>
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Vous pouvez nous contactez si vous souhaitez plus d'information</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Paris & Orléans, France</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> gwennael.maillet45@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Evoyé</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>Modifié par Gwennaël Maillet, 2021.</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
